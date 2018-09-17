@@ -11,6 +11,7 @@ import {
   Platform,
   TouchableHighlight,
   Dimensions,
+  TextInput,
 } from 'react-native';
 import Modal from 'react-native-modalbox';
 import Button from 'react-native-button';
@@ -37,7 +38,10 @@ export default class AddModal extends Component {
         onClosed={() => {
           alert('Modal close');
         }}>
-        <Text>YourText</Text>
+        <Text style={styles.title}>New food's information</Text>
+        <TextInput style={styles.textInput}
+          placeholder="Enter new food's name"
+        ></TextInput>
       </Modal>
     );
   }
@@ -50,5 +54,19 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     width: screen.width - 80,
     height: 200,
+  },
+  title: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginTop: 40,
+  },
+  textInput: {
+    height: 40,
+    borderBottomColor: 'gray',
+    marginHorizontal: 30,
+    marginTop: 20,
+    marginBottom: 10,
+    borderBottomWidth: 1,
   },
 });

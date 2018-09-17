@@ -15,6 +15,6 @@ import VerticalScrollView from './components/VerticalScrollView';
 import HorizontalScrollView from './components/HorizontalScrollView';
 import ViewPageExample from './components/ViewPageExample';
 import BasicFlatList from './components/BasicFlatList';
-import AddPostStudy from './components/AddPostStudy';
+// import AddPostStudy from './components/AddPostStudy';
 
-AppRegistry.registerComponent(appName, () => AddPostStudy);
+AppRegistry.registerComponent(appName, () => BasicFlatList);
