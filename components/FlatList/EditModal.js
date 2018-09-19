@@ -29,6 +29,7 @@ export default class EditModal extends Component {
   }
 
   showEditModal = (editingFood, flatlistItem) => {
+    // console.log(`editingFood = ${JSON.stringify(editingFood)}`);
     this.setState({
       key: editingFood.key,
       foodName: editingFood.name,
@@ -61,6 +62,7 @@ export default class EditModal extends Component {
     }
     flatListData[foundIndex].name = this.state.foodName;
     flatListData[foundIndex].foodDescription = this.state.foodDescription;
+    this.state.flatlistItem.refreshFlatListItem();
     this.refs.myModal.close();
   }
 
